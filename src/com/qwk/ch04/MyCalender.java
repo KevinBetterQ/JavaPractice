@@ -86,9 +86,9 @@ public class MyCalender {
 	
 	
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
 		System.out.println("————————————————万年历————————————————");
-		while(input.next() == "Y"){
+		Scanner input = new Scanner(System.in);
+		while(input.next().equals("hh")){
 			System.out.println("请输入年份：");
 			int year = input.nextInt();
 			System.out.println("请输入月份：");
@@ -105,6 +105,7 @@ public class MyCalender {
 		for(int i=1; i<=12; i++){
 			calender(year, i);
 		}
+		System.out.println("——————————————————————————————————————");
 		System.out.println("相同天数：" + dayNumber);
 		
 	}

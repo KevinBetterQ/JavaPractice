@@ -16,7 +16,9 @@ public class PrimeNum {
 	}
 	
 	public static void method1() {
-		int[] primes = new int[100];//所有int数组元素会初始化为0
+		long startTime = System.currentTimeMillis();
+		
+		int[] primes = new int[NUM];//所有int数组元素会初始化为0
 		int numb = 0;
 		
 		for(int i=2; i<=NUM; i++ ){
@@ -34,12 +36,19 @@ public class PrimeNum {
 			System.out.print(primes[ii]+" ");
 		}
 		System.out.print("\n");
+		
+		long endTime = System.currentTimeMillis();
+		float seconds = (endTime - startTime) / 1000F;
+        System.out.println(Float.toString(seconds) + " 秒");
 	}
 	
 	
 	public static void method2() {
+		long startTime = System.currentTimeMillis();
+		
 		//使用了筛选的方法
 		boolean[] primes = new boolean[NUM+5];//初始化为false
+		primes[0] = false;
 		primes[1] = false;
 		primes[2] = true;
 		for(int i=3;i<=NUM;i++){
@@ -59,5 +68,12 @@ public class PrimeNum {
 			if(primes[i]) System.out.print(i+" ");
 		}
 		System.out.println("\n");
+		
+		
+		long endTime = System.currentTimeMillis();
+		
+		float seconds = (endTime - startTime) / 1000F;
+        System.out.println(Float.toString(seconds) + " 秒");
+
 	}
 }

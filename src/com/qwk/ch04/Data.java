@@ -36,6 +36,6 @@ public class Data {
 		  int m, y;
 		  Scanner reader = new Scanner(System.in);
 
-		  new Data(2008, 2);
+		  new Data(2008, 12);
 		 }
 }
